@@ -1,0 +1,18 @@
+# Gradle and Kotlin build output
+.gradle/
+.kotlin/
+build/
+out/
+
+# Local IDE and machine settings
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+local.properties
+.DS_Store
+*.log
+
+# The Gradle wrapper JAR is part of the project.
+!gradle/wrapper/gradle-wrapper.jar

@@ -1,0 +1,19 @@
+# Ktor configuration file for the server.
+#
+# ktor.application.modules
+#   Lists the functions that should be loaded when the server starts.
+#   Here it loads the 'module' function from Application.kt, which sets up
+#   routing, serialization, and other server features.
+#
+# ktor.deployment.port
+#   Defines which port the server listens on. Port 8080 is a common default
+#   for local development.
+#
+# Resources:
+# https://ktor.io/docs/server-configuration-file.html
+ktor:
+  application:
+    modules:
+      - tcs.app.dev.server.ApplicationKt.module
+  deployment:
+    port: 8080

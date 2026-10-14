@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This network security configuration allows cleartext HTTP traffic (non HTTPS) to the
+special emulator address 10.0.2.2. This is required when the server does not use HTTPS
+during local development. In production builds this should be removed or set to HTTPS only.
+
+Resources
+- https://developer.android.com/privacy-and-security/security-config
+-->
+<network-security-config>
+    <!-- Allow cleartext HTTP for 10.0.2.2 in debug builds -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,143 @@
+[versions]
+# Android Gradle Plugin for building Android apps
+agp = "9.4.1"
+
+# Kotlin language and compiler version
+kotlin = "2.4.21"
+
+# AndroidX core utilities with Kotlin extensions
+coreKtx = "1.19.1"
+
+# Unit testing with JUnit 4
+junit = "4.13.2"
+# AndroidX JUnit test extensions
+junitVersion = "1.3.0"
+
+# AndroidX Lifecycle components for state and lifecycle management
+lifecycle = "2.11.0"
+
+# Integration between Jetpack Compose and Activity
+activityCompose = "1.13.0"
+
+# Compose BOM to align all Compose library versions
+composeBom = "2026.09.00"
+
+# Jetpack DataStore for key-value and typed data storage
+datastore = "1.2.1"
+
+# Kotlin Serialization for JSON handling
+serialization = "1.11.0"
+
+# JUnit 5 (Jupiter) testing framework
+junitJupiter = "6.1.3"
+
+# Kotlin Coroutines for asynchronous programming
+coroutines = "1.11.0"
+
+# Ktor framework for building server and client applications
+ktor = "3.6.0"
+
+# Logback logging framework for servers
+logback = "1.6.5"
+
+[libraries]
+# Jetpack Compose Material icon set
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+
+# Core Android utilities with Kotlin extensions
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+# JUnit 4 for unit testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+
+# AndroidX JUnit extensions for instrumented tests
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+
+# Android Lifecycle runtime components with Kotlin support
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+
+# Compose and Activity integration
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+
+# Compose BOM (manages all Compose versions)
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+
+# Core Compose UI modules
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+
+# Compose Material 3 components
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+# Lifecycle integrations for Compose + ViewModel
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+
+# Compose testing
+androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+# Jetpack DataStore for data persistence
+androidx-datastore = { group = "androidx.datastore", name = "datastore", version.ref = "datastore" }
+
+# Kotlin Serialization for JSON encoding and decoding
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
+
+# Kotlin test utilities (common test framework)
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test"}
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
+
+# JUnit Jupiter for JUnit 5 based testing
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
+
+# Coroutines for background work, async tasks, and threading
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+
+# Ktor server libraries for embedded servers and Netty engine
+ktor-server-core = { group = "io.ktor", name = "ktor-server-core", version.ref = "ktor" }
+ktor-server-core-jvm = { group = "io.ktor", name = "ktor-server-core-jvm", version.ref = "ktor" }
+ktor-server-netty = { group = "io.ktor", name = "ktor-server-netty", version.ref = "ktor" }
+ktor-server-config-yaml = { group = "io.ktor", name = "ktor-server-config-yaml", version.ref = "ktor" }
+
+# Ktor content negotiation (ex. JSON)
+ktor-server-content-negotiation = { group = "io.ktor", name = "ktor-server-content-negotiation", version.ref = "ktor" }
+
+# Ktor testing utilities
+ktor-server-test-host = { group = "io.ktor", name = "ktor-server-test-host", version.ref = "ktor" }
+
+# Ktor client libraries for making HTTP requests
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+
+# JSON serialization for Ktor using kotlinx serialization
+ktor-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+# Logback logging for Ktor server applications
+logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback" }
+
+[plugins]
+# Kotlin JVM plugin, required for non-Android Kotlin modules (e.g., Ktor server)
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+# Plugin to build Android applications
+android-application = { id = "com.android.application", version.ref = "agp" }
+
+# Compose compiler plugin
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+# Kotlin Parcelize for simplifying Parcelable classes
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+
+# Kotlin serialization plugin for JSON and other formats
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+# Ktor plugin for server-side modules
+ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
+
+# Resources
+# - https://docs.gradle.org/current/userguide/version_catalogs.html

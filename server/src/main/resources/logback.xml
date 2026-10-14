@@ -1,0 +1,36 @@
+<!--
+This Logback configuration controls how the server writes log output.
+
+<Appender STDOUT>
+    Sends all log messages to the console. The encoder defines the format of each line:
+    - Timestamp (year, month, day, time)
+    - Thread name
+    - Log level (INFO, WARN, ERROR)
+    - Logger name
+    - The actual message
+
+<root level="INFO">
+    Sets the default logging level for the entire server. Only messages with level INFO
+    or higher will be printed. All output goes through the STDOUT appender.
+
+<logger name="org.eclipse.jetty" level="INFO">
+<logger name="io.netty" level="INFO">
+    These lines override logging levels for specific libraries. They ensure that Jetty
+    and Netty do not print verbose debug logs, which keeps console output readable.
+
+Resources
+- Logback configuration: https://logback.qos.ch/manual/configuration.html
+- Logback manual: https://logback.qos.ch/manual/
+-->
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <logger name="org.eclipse.jetty" level="INFO"/>
+    <logger name="io.netty" level="INFO"/>
+</configuration>
